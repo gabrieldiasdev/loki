@@ -1,0 +1,362 @@
+
+.img_background{
+    height: 100vh;
+    width: 100vw;
+    background: url('../image/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+    position: fixed;
+    z-index: -1;
+}
+
+main .main_header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 0;
+}
+
+main .main_header .main_header_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+main .main_header .main_header_text p{
+    font-family: var(--font-b612);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--white);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main .main_header .main_header_text h3{
+    font-family: var(--font-b612);
+    font-weight: 700;
+    font-size: 9.6rem;
+    color: var(--white);
+}
+
+main .main_section_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 46px;
+}
+
+main .main_section_container .main_section{
+    display: flex;
+    align-items: flex-start;
+    gap: 73px;
+}
+
+main .main_section_container .main_section img{
+    width: 100%;
+    height: auto;
+    max-width: 190px;
+    border-radius: 20px;
+    transition: all 1s ease;
+}
+
+main .main_section_container .main_section img:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px var(--dark);
+}
+
+main .main_section_container .main_section .main_section_about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+main .main_section_container .main_section .main_section_about .main_section_about_text{
+    font-family: var(--font-b612);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 32px;
+    color: var(--white);
+}
+
+main .main_section_container .main_section .main_section_about  .main_section_about_info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 110px;
+}
+
+main .main_section_container .main_section .main_section_about  .main_section_about_info .main_section_about_info_time{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+main .main_section_container .main_section .main_section_about  .main_section_about_info .main_section_about_info_time i{
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+main .main_section_container .main_section .main_section_about  .main_section_about_info .main_section_about_info_time p{
+    font-family: var(--font-b612);
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--white);
+}
+
+main .main_section_container .main_section .main_section_about  .main_section_about_info h5{
+    font-family: var(--font-b612);
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--white);
+}
+
+main .main_section_container .main_section .main_section_about .main_section_about_info_actions{
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+main .main_section_container .main_section .main_section_about .main_section_about_info_actions .main_section_about_info_actions_watch{
+    width: 184px;
+    height: 52px;
+    background: var(--blue);
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+main .main_section_container .main_section .main_section_about .main_section_about_info_actions .main_section_about_info_actions_watch:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px var(--blue);
+}
+
+main .main_section_container .main_section .main_section_about .main_section_about_info_actions .main_section_about_info_actions_trailer{
+    width: 115px;
+    height: 52px;
+    background: var(--dark);
+    border-radius: 3px;
+    border: 1px solid var(--white);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+main .main_section_container .main_section .main_section_about .main_section_about_info_actions .main_section_about_info_actions_trailer:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px var(--white);
+}
+
+.rating { 
+    border: none;
+    float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 2.5rem;
+  font-family: 'FontAwesome';
+  display: inline-block;
+  content: "\f005";
+  cursor: pointer;
+}
+
+.rating > .half:before { 
+    content: "\f089";
+    position: absolute;
+}
+
+.rating > label { 
+    color: #ddd; 
+    float: right; 
+}
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: var(--yellow);  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+#mobile{
+    display: none;
+    visibility: hidden;
+}
+
+.main_section_container_mobile{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.main_section_container_mobile .main_section_about_info{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.main_section_container_mobile .main_section_about_info .main_section_about_info_time{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.main_section_container_mobile .main_section_about_info .main_section_about_info_time i{
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.main_section_container_mobile .main_section_about_info .main_section_about_info_time p{
+    font-family: var(--font-b612);
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--white);
+}
+
+.main_section_container_mobile .main_section_about_info  h5{
+    font-family: var(--font-b612);
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--white);
+}
+
+.main_section_container_mobile .main_section_about_info_actions{
+    background: #19191F;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 33px 25px;
+}
+
+.main_section_container_mobile .main_section_about_info_actions .main_section_about_info_actions_buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main_section_container_mobile .main_section_about_info_actions .main_section_about_info_actions_buttons .main_section_about_info_actions_watch{
+    width: 150px;
+    height: 35px;
+    background: var(--blue);
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.main_section_container_mobile .main_section_about_info_actions .main_section_about_info_actions_buttons .main_section_about_info_actions_trailer{
+    width: 150px;
+    height: 35px;
+    background: var(--dark);
+    border-radius: 3px;
+    border: 1px solid var(--white);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.main_section_container_mobile .main_section_about_info_actions hr{
+    width: 100%;
+    border: 1px solid rgba(196, 196, 196, 0.08);
+}
+
+.main_section_container_mobile .main_section_about_info_actions .main_section_about_text{
+    font-family: var(--font-b612);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 140%;
+    color: var(--white);
+}
+
+@media screen and (min-height: 1080px){
+    main .main_section_container{
+        margin-top: 76px;
+    }
+    main .main_section_container .main_section .main_section_about {
+        gap: 45px;
+    }
+    main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main .main_section_container .main_section img{
+        max-width: 225px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    main .main_section_container .main_section .main_section_about .main_section_about_text br{
+        display: none;
+    }
+    main .main_section_container .main_section{
+        gap: 50px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    main .main_section_container .main_section .main_section_about .main_section_about_info{
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 680px){
+    #desktop{
+        display: none;
+        visibility: hidden;
+    }
+    #mobile{
+        display: flex;
+        visibility: visible;
+    }
+    .rating > input { display: none; } 
+    .rating > label:before { 
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .main_section_container_mobile .main_section_about_info_actions .main_section_about_info_actions_buttons{
+        flex-direction: column;
+        gap: 11px;
+    }
+    .main_section_container_mobile .main_section_about_info_actions .main_section_about_info_actions_buttons .main_section_about_info_actions_trailer{
+        width: 230px;
+    }
+    .main_section_container_mobile .main_section_about_info_actions .main_section_about_info_actions_buttons .main_section_about_info_actions_watch{
+        width: 230px;
+    }
+}
